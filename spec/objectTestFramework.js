@@ -15,16 +15,18 @@
     } else {
       console.log('fail')
     }
-
-    return("hi from inside match")
   }
 
-  function similar (code, expected) {
-    if(code == expected) {
+  function instanceOf(codeToTest, expected) {
+    if(codeToTest == expected) {
       console.log('pass')
+    } else {
+      console.log('fail')
     }
   }
+
   exports.describe = describe
   exports.it = it
   exports.match = match
+  exports.instanceOf = instanceOf
 })(this)
