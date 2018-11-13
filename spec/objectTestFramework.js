@@ -4,15 +4,19 @@
     it()
   }
 
-  function it(string, match) {
+  function it(string, test) {
     console.log(string)
-    match()
+    test()
   }
 
-  function match(code, expected) {
-    if(code === expected) {
-      document.createElement(p)
+  function match(codeToTest, expected) {
+    if(codeToTest === expected) {
+      console.log('pass')
+    } else {
+      console.log('fail')
     }
+
+    return("hi from inside match")
   }
 
   function similar (code, expected) {
@@ -22,6 +26,5 @@
   }
   exports.describe = describe
   exports.it = it
-  // exports.match = match
-  exports.mismatch = mismatch
+  exports.match = match
 })(this)

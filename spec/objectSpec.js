@@ -1,2 +1,5 @@
 describe('Note', function (){
-   it('creates a note', mismatch (2+2,5))})
+   it('creates a note', function() {
+     match(2+2, 4)
+   })
+ })
