@@ -1,15 +1,7 @@
-function testPass() {
+function testOutcome(string) {
   var result = document.createElement("p")
-  result.textContent = "test passed!"
-  result.setAttribute('class', 'pass')
-  document.body.appendChild(result)
-}
-
-function testFail() {
-  var result = document.createElement("p")
-  var errors = document.createElement("p")
-  result.textContent = "test failed!"
-  result.setAttribute('class', 'fail')
+  result.textContent = "test " + string
+  result.setAttribute('class', string)
   document.body.appendChild(result)
 }
 
@@ -40,17 +32,18 @@ function testSubHeading(string) {
 
   function match(codeToTest, expected) {
     if(codeToTest === expected) {
-      testPass()
+      testOutcome("pass")
     } else {
-      testFail()
+      testOutcome("fail")
+      // console.log(codeToTest.stack)
     }
   }
 
   function instanceOf(codeToTest, expected) {
     if(codeToTest == expected) {
-      testPass()
+      testOutcome("pass")
     } else {
-      testFail()
+      testOu("fail")
     }
   }
 
