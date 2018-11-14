@@ -7,6 +7,7 @@ function testPass() {
 
 function testFail() {
   var result = document.createElement("p")
+  var errors = document.createElement("p")
   result.textContent = "test failed!"
   result.setAttribute('class', 'fail')
   document.body.appendChild(result)
@@ -41,7 +42,7 @@ function testSubHeading(string) {
     if(codeToTest === expected) {
       testPass()
     } else {
-      console.log('fail'.stack)
+      testFail()
     }
   }
 
