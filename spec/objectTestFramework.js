@@ -13,7 +13,7 @@
     if(codeToTest === expected) {
       console.log('pass')
     } else {
-      console.log('fail')
+      console.log('fail'.stack)
     }
   }
 

@@ -1,11 +1,26 @@
 "use strict";
 
 (function(exports) {
-  function note(string) {
-    return string;
+
+  var body;
+
+  function getNote() {
+    return body
   }
 
-  exports.note = note;
-  // export default exports
-  // export default note;
+  function getNoteForDisplay() {
+    return body.substring(0,20);
+  }
+
+  function noteMaker(noteBody) {
+    body = noteBody
+
+    return {
+      getNote: getNote,
+      getNoteForDisplay: getNoteForDisplay
+    }
+  }
+
+  exports.noteMaker = noteMaker
+
 })(this);

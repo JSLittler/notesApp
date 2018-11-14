@@ -1,14 +1,15 @@
+var note1 = noteMaker("This is a message for testing")
 
-var note1 = new note("Hello World")
-
-describe('Note', function (){
+ describe('Note', function (){
    it('creates a note', function() {
-     match(2+2, 4)
+     match(note1.getNote(), "This is a message for testing");
    });
  });
 
- describe('note', function () {
-    it('should be an instance of note', function() {
-      instanceOf(note1, new note);
-    })
- });
+ var note2 = noteMaker("This is a message for testing")
+
+ describe('Note', function (){
+  it('has a description', function() {
+    match(note2.getNoteForDisplay(), "This is a message fo")
+  });
+});
