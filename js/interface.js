@@ -1,9 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
-    console.log( "ready!" );
-});
-
-function showFullNote() {
-    var x = document.getElementById('note-add-list');
+function showNoteBox() {
+    var x = document.getElementById("note-add-box");
     if (x.style.display === 'none') {
         x.style.display = 'block';
     }
@@ -21,3 +17,7 @@ function homeButton() {
       x.style.display = 'none';
   }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    console.log( "ready!" );
+});

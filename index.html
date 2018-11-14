@@ -10,7 +10,7 @@
    </head>
 
   <body>
-<div id="note-add-list">
+<div id="note-add-box">
   <h1>Notes</h1>
   <p>
     Write note below in box
@@ -19,20 +19,23 @@
     <label for="add_note"></label>
     <textarea name="add_note" id="add_note" placeholder="New Note"></textarea>
     <button type="button" name="note_submit" id="note_submit" value="New Note">New Note</button>
-    <p>
-      <button onclick="showFullNote()">
-        View note
-      </button>
-            ***First 20 chars go here***
-    </p>
   </form>
+</div>
+<div class="notes-list">
+  <p>
+    <button onclick="showNoteBox()">
+      View note
+    </button>
+      ***First 20 chars go here***
+  </p>
 </div>
 
     <div id="users-note">
       <h1>View Note</h1>
-          <button onclick="homeButton()"id="Return to Home" type="button">Home</button>
-          <div class="row" id="home">
-          </div>
     </div>
+
+    <div class="row" id="home">
+        <button onclick="homeButton()"id="Return to Home" type="button">Home</button>
+        </div>
   </body>
 </html>
