@@ -8,9 +8,11 @@
     <style>
     </style>
    </head>
-
   <body>
-    <div id="note-add-list">
+    <p style="text-align:center; font-weight:bold; font-style:italic;">
+    <a href="javascript:SwapDivsWithClick('note_add','users_note')">(Swap Divs)</a>
+    </p>
+    <div id="note_add">
       <h1>Notes</h1>
       <p>
         Write note below in box
@@ -18,16 +20,18 @@
         <form>
           <label for="add_note"></label><textarea name="add_note" id="add_note" placeholder="New Note"></textarea>
           <button type="button" name="note_submit" id="note_submit" value="New Note">New Note</button>
-          </form>
+        </form>
     </div>
-    <div id="users-note">
+    <div id="users_note" style="display:none;">
       <h1>View Note</h1>
       <p>
-        View chosen note
+        View users full note
         </p>
           <button id="Return to Home" type="button">Home</button>
           <div class="row" id="home">
+
           </div>
+
     </div>
   </body>
 </html>
