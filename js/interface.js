@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     console.log( "ready!" );
 });
@@ -18,4 +19,5 @@ function SwapDivsWithClick(div1,div2)
       d1.style.display = "block";
       d2.style.display = "none";
    }
+
 }
