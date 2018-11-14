@@ -13,6 +13,6 @@ var note2 = noteMaker("This is a message for testing")
   });
 
   it('stores more than one note', function() {
-    match(Notes.length, 2)
+    match(notesArray.length, 2)
   });
 });

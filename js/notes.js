@@ -1,8 +1,11 @@
 "use strict";
 
+
+
 (function(exports) {
 
   var body;
+  var notesArray = []
 
   function getNote() {
     return body
@@ -14,7 +17,7 @@
 
   function noteMaker(noteBody) {
     body = noteBody
-
+    notesArray.push(body)
     return {
       getNote: getNote,
       getNoteForDisplay: getNoteForDisplay
@@ -22,5 +25,6 @@
   }
 
   exports.noteMaker = noteMaker
+  exports.notesArray = notesArray
 
 })(this);
