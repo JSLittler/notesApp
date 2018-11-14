@@ -1,6 +1,14 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     console.log( "ready!" );
+    var button = document.getElementById("note_submit")
+      button.addEventListener("click", function () {
+      var mesg = add_note.value
+      var textInput = noteMaker(mesg)
+      var note = document.createElement("p")
+      note.textContent = textInput.getNote()
+      document.body.appendChild(note)
+    });
 });
 
 
