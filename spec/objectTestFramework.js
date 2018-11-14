@@ -41,11 +41,7 @@ function testSubHeading(string) {
     if(codeToTest === expected) {
       testPass()
     } else {
-<<<<<<< HEAD
       console.log('fail'.stack)
-=======
-      testFail()
->>>>>>> bab54127dd22bade2938b445daf19361f48d319e
     }
   }
 
