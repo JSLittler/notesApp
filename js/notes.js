@@ -8,7 +8,7 @@
   var notesArray = []
 
   function getNote() {
-    return notesArray[notesArray.length - 1]
+    return notesArray
   }
 
   function getNoteForDisplay() {

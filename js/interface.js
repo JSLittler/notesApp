@@ -5,11 +5,17 @@ document.addEventListener('DOMContentLoaded', function () {
       button.addEventListener("click", function () {
       var mesg = add_note.value
       var textInput = noteMaker(mesg)
-      var note = document.createElement("p")
-      note.textContent = textInput.getNote()
-      document.body.appendChild(note)
+      var listItem = document.createElement("li")
+      var linkItem = document.createElement("a")
+      linkItem.setAttribute("href", "javascript:SwapDivsWithClick('note_add','users_note')")
+      linkItem.textContent = textInput.getNoteForDisplay();
+      // listItem.textContent = linkItem
+      document.getElementById('list_links').appendChild(listItem).
+      add_note.value = "";
     });
 });
+
+
 
 
 function SwapDivsWithClick(div1,div2)
