@@ -21,3 +21,7 @@ function SwapDivsWithClick(div1,div2)
    }
 
 }
+
+function TestNote() {
+  note_view = document.getElementById("view_note").innerHTML += "<p>I had a lovely day!</p>";
+}
