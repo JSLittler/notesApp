@@ -8,7 +8,7 @@ var note2 = noteMaker("This is a message for testing")
    });
 
 
-  it('has a description', function() {
+  it('has a 20 character description', function() {
     match(note2.getNoteForDisplay(), "This is a message fo")
   });
 });

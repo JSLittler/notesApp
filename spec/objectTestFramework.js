@@ -34,7 +34,7 @@ function testSubHeading(string) {
     if(codeToTest === expected) {
       testOutcome("pass")
     } else {
-      testOu("fail")
+      testOutcome("fail")
       // console.log(codeToTest.stack)
     }
   }
