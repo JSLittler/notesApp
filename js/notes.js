@@ -11,6 +11,10 @@
     return notesArray
   }
 
+  function getNoteByIndex(index) {
+    return notesArray[index]
+  }
+
   function getNoteForDisplay() {
     return body.substring(0,20);
   }

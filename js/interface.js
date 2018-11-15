@@ -7,15 +7,20 @@ document.addEventListener('DOMContentLoaded', function () {
       var textInput = noteMaker(mesg)
       var listItem = document.createElement("li")
       var linkItem = document.createElement("a")
+      var parent = document.getElementById('list_links')
       linkItem.setAttribute("href", "javascript:SwapDivsWithClick('note_add','users_note')")
       linkItem.textContent = textInput.getNoteForDisplay();
-      // listItem.textContent = linkItem
-      document.getElementById('list_links').appendChild(listItem).
-      add_note.value = "";
+        createTags(parent, listItem, linkItem)
+        add_note.value = "";
+      });
     });
-});
 
-
+function createTags(a, b, c) {
+  var nodes = arguments;
+    for(var i = 1; i < nodes.length; i++) {
+      nodes[i - 1].appendChild(nodes[i]);
+    }
+  }
 
 
 function SwapDivsWithClick(div1,div2)
