@@ -9,22 +9,25 @@ document.addEventListener('DOMContentLoaded', function () {
       var listItem = document.createElement("li")
       var linkItem = document.createElement("a")
       var parent = document.getElementById('list_links')
-      linkItem.addEventListener("click", function () {
-        var output = document.getElementById("note")
-        output.textContent = (notesArray[this.id])
-      })
-      linkItem.setAttribute("class", "view_full_note")
-      linkItem.setAttribute("id", msgIndex)
-      linkItem.setAttribute("href", "javascript:SwapDivsWithClick('note_add','users_note')")
-      linkItem.textContent = textInput.getNoteForDisplay();
+      linkItemSetup(linkItem, msgIndex, textInput)
       nestTags(parent, listItem, linkItem)
-
       msgIndex ++;
-      console.log(linkItem)
       add_note.value = "";
     });
-
   });
+
+function linkItemSetup(linkItem, msgIndex, textInput) {
+  linkItem.addEventListener("click", function () {
+    var output = document.getElementById("note")
+    output.textContent = (notesArray[this.id])
+  })
+  linkItem.setAttribute("class", "view_full_note")
+  linkItem.setAttribute("id", msgIndex)
+  linkItem.setAttribute("href", "javascript:SwapDivsWithClick('note_add','users_note')")
+  linkItem.textContent = textInput.getNoteForDisplay();
+  return linkItem
+}
+
 
 function nestTags(a, b, c) {
   var nodes = arguments;
@@ -32,8 +35,6 @@ function nestTags(a, b, c) {
       nodes[i - 1].appendChild(nodes[i]);
     }
   }
-
-
 
 function SwapDivsWithClick(div1,div2) {
    d1 = document.getElementById(div1);
